@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYOL - הופכים את האירוע שלך לחוויה יוקרתית</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: #FEFEFE; 
+            overflow-x: hidden; 
+        }
+        .hero-bg {
+            background-color: #475569; 
+        }
+        .cta-button {
+            background-color: #F7E7A4; 
+            color: #475569; 
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #e3d294;
+            transform: scale(1.05);
+        }
+        .text-gold {
+            color: #F7E7A4;
+        }
+        .border-gold {
+            border-color: #F7E7A4;
+        }
+        .bg-silver {
+            background-color: #64748B; 
+        }
+        .bg-gold-light {
+            background-color: #F7E7A4;
+        }
+        .icon-star::before { content: '★'; }
+        .icon-rocket::before { content: '🚀'; }
+        .icon-heart::before { content: '💖'; }
+        .icon-phone::before { content: '📱'; }
+        .icon-gamepad::before { content: '🎮'; }
+        .icon-video::before { content: '🎬'; }
+        .icon-message::before { content: '💬'; }
+        .icon-qr::before { content: '📷'; }
+
+        @keyframes fadeInSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+        }
+        .animate-delay-1 { animation-delay: 0.2s; }
+        .animate-delay-2 { animation-delay: 0.4s; }
+        .animate-delay-3 { animation-delay: 0.6s; }
+        .animate-delay-4 { animation-delay: 0.8s; }
+        .animate-delay-5 { animation-delay: 1s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-hover:hover {
+            animation: pulse 0.8s infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#FEFEFE] text-[#475569]">
+
+    <!-- מסך 1: דף הבית (Hero) -->
+    <header id="hero" class="hero-bg text-white py-20 md:py-32 rounded-b-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-4 leading-tight animate-fade-in-up animate-delay-1">MYOL</h1>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight animate-fade-in-up animate-delay-2">הופכים את האירוע שלך לחוויה אינטראקטיבית ובלתי נשכחת.</h2>
+            <p class="text-lg md:text-xl font-light mb-8 max-w-3xl mx-auto text-gray-200 animate-fade-in-up animate-delay-3">מעלים את רמת האנרגיה: קוד QR אישי, משחקים, סרטונים וזיכרונות מהאירוע, ישירות לנייד של האורחים.</p>
+            <a href="#packages" class="cta-button font-bold py-3 px-8 rounded-full shadow-lg animate-fade-in-up animate-delay-4">בואו ניצור את החוויה שלכם!</a>
+        </div>
+    </header>
+
+    <!-- מסך 2: איך זה עובד -->
+    <section id="how-it-works" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 animate-fade-in-up animate-delay-1">יוצרים קסם בכמה צעדים פשוטים.</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-[#64748B] animate-fade-in-up animate-delay-2">
+                    <div class="bg-silver text-white rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4">1</div>
+                    <h4 class="text-xl font-bold mb-2">בוחרים ומספרים</h4>
+                    <p class="text-gray-600">בוחרים את סוג האירוע ומוסיפים את השמות והתאריך.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-[#64748B] animate-fade-in-up animate-delay-3">
+                    <div class="bg-silver text-white rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4">2</div>
+                    <h4 class="text-xl font-bold mb-2">מעלים סרטון</h4>
+                    <p class="text-gray-600">משתפים את האורחים בסרטון "תודה שהגעתם" אישי.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-[#64748B] animate-fade-in-up animate-delay-4">
+                    <div class="bg-silver text-white rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4">3</div>
+                    <h4 class="text-xl font-bold mb-2">העובדות המעניינות</h4>
+                    <p class="text-gray-600">מעלים עובדות וסיפורים שיהפכו למשחקים כיפיים.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center border border-[#64748B] animate-fade-in-up animate-delay-5">
+                    <div class="bg-silver text-white rounded-full h-12 w-12 flex items-center justify-center text-xl font-bold mb-4">4</div>
+                    <h4 class="text-xl font-bold mb-2">האורחים נכנסים לחוויה</h4>
+                    <p class="text-gray-600">קוד QR אישי על מחזיק או כרטיס שמובילים אותם ישר לחגיגה.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#packages" class="cta-button font-bold py-3 px-8 rounded-full shadow-lg animate-pulse-hover">מוכנים ליצור את החוויה שלכם?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- מסך 3: חוויה לאורח -->
+    <section id="guest-experience" class="bg-gray-100 py-16 md:py-24 rounded-lg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 animate-fade-in-up animate-delay-1">ככה מרגישים האורחים שלכם.</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/fff/475569?text=חוויית+אורח" alt="טלפון מציג חוויית אורח" class="rounded-xl shadow-lg w-full border border-[#64748B] animate-fade-in-up animate-delay-2">
+                </div>
+                <div class="md:w-1/2">
+                    <ul class="space-y-6 text-[#475569] animate-fade-in-up animate-delay-3">
+                        <li class="flex items-center space-x-4 space-x-reverse">
+                            <span class="text-3xl text-gold icon-qr"></span>
+                            <p class="text-lg">סורקים בקלות, בלי אפליקציות.</p>
+                        </li>
+                        <li class="flex items-center space-x-4 space-x-reverse">
+                            <span class="text-3xl text-gold icon-gamepad"></span>
+                            <p class="text-lg">נהנים ממשחקים כיפיים וקלילים על הזוג או חתן השמחה.</p>
+                        </li>
+                        <li class="flex items-center space-x-4 space-x-reverse">
+                            <span class="text-3xl text-gold icon-phone"></span>
+                            <p class="text-lg">גם לאורחים שקופצים לביקור קצר ורוצים להשאיר מזכרת דיגיטלית.</p>
+                        </li>
+                        <li class="flex items-center space-x-4 space-x-reverse">
+                            <span class="text-3xl text-gold icon-video"></span>
+                            <p class="text-lg">צופים בסרטון אישי ומרגש מהזוג.</p>
+                        </li>
+                        <li class="flex items-center space-x-4 space-x-reverse">
+                            <span class="text-3xl text-gold icon-message"></span>
+                            <p class="text-lg">משאירים ברכות וצילומים בקלות לטובת הזוג.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- מסך 4: יתרונות וערכים -->
+    <section id="advantages" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 animate-fade-in-up animate-delay-1">היתרונות שמבדילים אותנו.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border border-[#64748B] animate-fade-in-up animate-delay-2">
+                    <div class="text-4xl mb-4 text-gold icon-star"></div>
+                    <h4 class="text-2xl font-bold mb-2">ערך מוסף אמיתי</h4>
+                    <p class="text-gray-600">חוויה אינטראקטיבית ואישית, שלא משאירה אף אחד אדיש.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border border-[#64748B] animate-fade-in-up animate-delay-3">
+                    <div class="text-4xl mb-4 text-gold icon-rocket"></div>
+                    <h4 class="text-2xl font-bold mb-2">נוחות מקסימלית</h4>
+                    <p class="text-gray-600">מקסימום אינטראקציה, מינימום התעסקות (אנחנו דואגים להכל!).</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center border border-[#64748B] animate-fade-in-up animate-delay-4">
+                    <div class="text-4xl mb-4 text-gold icon-heart"></div>
+                    <h4 class="text-2xl font-bold mb-2">זיכרונות לדורות</h4>
+                    <p class="text-gray-600">מזכרת דיגיטלית של כל הרגעים המרגשים.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#packages" class="cta-button font-bold py-3 px-8 rounded-full shadow-lg animate-pulse-hover">בואו נתחיל את הקסם!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- מסך 5: חבילות וטופס הזמנה -->
+    <section id="packages" class="bg-gray-100 py-16 md:py-24 rounded-lg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12 animate-fade-in-up animate-delay-1">בוחרים את החוויה המושלמת עבורכם.</h2>
+            
+            <div id="contact-form" class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-[#64748B]">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-6">בואו נתחיל ליצור את החוויה שלכם!</h3>
+                <form id="orderForm">
+                    <!-- פרטי אירוע -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label for="eventType" class="block text-[#475569] font-semibold mb-2">סוג אירוע:</label>
+                            <select id="eventType" name="eventType" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]" required>
+                                <option value="" disabled selected>בחר סוג</option>
+                                <option value="חתונה">חתונה</option>
+                                <option value="בר/בת מצווה">בר/בת מצווה</option>
+                                <option value="יום הולדת">יום הולדת</option>
+                                <option value="מסיבת רווקות/רווקים">מסיבת רווקות/רווקים</option>
+                                <option value="אירועי חברה">אירועי חברה</option>
+                                <option value="אחר">אחר</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="eventName" class="block text-[#475569] font-semibold mb-2">בעלי השמחה:</label>
+                            <input type="text" id="eventName" name="eventName" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]" required>
+                        </div>
+                        <div>
+                            <label for="eventDate" class="block text-[#475569] font-semibold mb-2">תאריך:</label>
+                            <input type="text" id="eventDate" name="eventDate" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]" placeholder="dd/mm/yyyy" required>
+                        </div>
+                    </div>
+
+                    <!-- פרטי יצירת קשר -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="customerEmail" class="block text-[#475569] font-semibold mb-2">כתובת האימייל שלך:</label>
+                            <input type="email" id="customerEmail" name="customerEmail" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]" placeholder="example@email.com" required>
+                        </div>
+                        <div>
+                            <label for="customerPhone" class="block text-[#475569] font-semibold mb-2">מספר הטלפון שלך:</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]" placeholder="050-1234567" required>
+                        </div>
+                    </div>
+                    
+                    <!-- שדה וידאו -->
+                    <div class="mb-6">
+                        <label for="videoFile" class="block text-[#475569] font-semibold mb-2">העלאת סרטון 'תודה שהגעתם':</label>
+                        <input type="file" id="videoFile" name="videoFile" accept="video/*" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]">
+                    </div>
+
+                    <!-- עובדות מעניינות -->
+                    <div id="factsContainer" class="mb-6">
+                        <label class="block text-[#475569] font-semibold mb-2">עובדות/סיפורים קצרים (עד 70 תווים לעובדה):</label>
+                        <p class="text-sm text-gray-500 mb-2">יש למלא מינימום 3 עובדות ועד 50 עובדות.</p>
+                        <div id="factsList" class="space-y-4"></div>
+                        <button type="button" id="addFactBtn" class="bg-silver text-white py-2 px-4 rounded-md mt-4 text-sm hover:bg-gray-500 transition-colors">הוסף עובדה</button>
+                    </div>
+                    
+                    <!-- חבילות -->
+                    <div class="mb-6">
+                        <label class="block text-[#475569] font-semibold mb-4">בחר חבילה:</label>
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <label class="flex-1 bg-white p-6 rounded-xl shadow-lg border-2 border-transparent transition-all duration-300 cursor-pointer hover:border-gold package-option">
+                                <input type="radio" name="package" value="basic" class="hidden" id="packageBasic">
+                                <div class="flex flex-col items-center">
+                                    <h4 class="text-2xl font-bold text-[#475569] mb-2">חבילה דיגיטלית</h4>
+                                    <p class="text-4xl font-extrabold text-[#475569]">499₪</p>
+                                    <ul class="text-sm text-gray-600 mt-2 list-none space-y-1 text-center">
+                                        <li><span class="text-gold">✔</span> קוד QR דיגיטלי</li>
+                                        <li><span class="text-gold">✔</span> שני סוגי משחקים</li>
+                                        <li><span class="text-gold">✔</span> גלריית תמונות וברכות</li>
+                                        <li><span class="text-gold">✔</span> אורחים ללא הגבלה</li>
+                                        <li class="font-semibold text-[#475569] mt-2"><span class="text-gold">✔</span> אלבום דיגיטלי מעוצב הכולל את כל התמונות, ברכות וסטטיסטיקה.</li>
+                                    </ul>
+                                </div>
+                            </label>
+                            <label class="relative flex-1 bg-white p-6 rounded-xl shadow-lg border-2 border-transparent transition-all duration-300 cursor-pointer hover:border-gold package-option">
+                                <input type="radio" name="package" value="premium" class="hidden" id="packagePremium">
+                                <div class="flex-col items-center">
+                                    <p class="text-gold font-bold text-sm text-center mb-2">החבילה הפופולרית ביותר</p>
+                                    <h4 class="text-2xl font-bold text-[#475569] mb-2 text-center">חבילת פרימיום</h4>
+                                    <p class="text-4xl font-extrabold text-center text-[#475569]">החל מ-599₪</p>
+                                    <ul class="text-sm text-gray-600 mt-2 list-none space-y-1 text-center">
+                                        <li><span class="text-gold">✔</span> כל מה שבחבילה הדיגיטלית</li>
+                                        <li><span class="text-gold">✔</span> מתנה פיזית עם QR</li>
+                                        <li><span class="text-gold">✔</span> עיצוב מותאם אישית</li>
+                                        <li><span class="text-gold">✔</span> משלוח עד הבית</li>
+                                    </ul>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- אפשרויות למתנות -->
+                    <div id="giftOptions" class="mb-6 hidden">
+                        <label class="block text-[#475569] font-semibold mb-2">בחר מתנה:</label>
+                        <select id="giftType" name="giftType" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]">
+                            <option value="none" selected>בחר מתנה</option>
+                            <option value="כוס צ'ייסר">כוס צ'ייסר ממותגת</option>
+                            <option value="מחזיק מפתחות">מחזיק מפתחות ממותג</option>
+                            <option value="פותחן בירות">פותחן בירות ממותג</option>
+                        </select>
+
+                        <div id="giftQuantityContainer" class="mt-4">
+                            <label for="giftQuantity" class="block text-[#475569] font-semibold mb-2">כמות יחידות:</label>
+                            <input type="number" id="giftQuantity" name="giftQuantity" min="1" max="9999" value="1" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]">
+                            <p class="text-sm text-gray-500 mt-1">
+                                העלות ליחידה משתנה לפי כמות:<br>
+                                1-99 יחידות: 3₪ ליחידה.<br>
+                                100-199 יחידות: 5₪ ליחידה.<br>
+                                200+ יחידות: 7₪ ליחידה.
+                            </p>
+                        </div>
+
+                        <div id="printTextContainer" class="mt-4">
+                            <label for="printText" class="block text-[#475569] font-semibold mb-2">טקסט להדפסה (עד 25 תווים):</label>
+                            <input type="text" id="printText" name="printText" maxlength="25" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]">
+                            <div class="flex justify-between mt-1 text-sm">
+                                <span id="charCount">0/25</span>
+                                <span id="charCountWarning" class="hidden text-red-500 font-bold"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- מחיר ועלות סופית -->
+                    <div class="mt-8 border-t border-gray-300 pt-6">
+                        <div class="flex justify-between text-lg font-semibold text-[#475569] mb-2">
+                            <span>עלות חבילה:</span>
+                            <span id="basePrice">499₪</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-semibold text-[#475569] mb-2">
+                            <span>עלות נוספת למתנות:</span>
+                            <span id="extraCost">0₪</span>
+                        </div>
+                        <div class="flex justify-between text-2xl font-extrabold text-[#475569]">
+                            <span>מחיר כולל:</span>
+                            <span id="totalPrice">499₪</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full cta-button font-bold py-3 mt-8 rounded-md shadow-lg">מעבר לתשלום</button>
+                </form>
+            </div>
+            
+            <!-- פרטי יצירת קשר -->
+            <div id="contact-info" class="max-w-xl mx-auto p-8 rounded-xl shadow-lg mt-12 text-center bg-white border border-[#64748B]">
+                <h3 class="text-2xl font-bold mb-4">פרטים ליצירת קשר</h3>
+                <p class="text-md mb-2"><span class="font-semibold">מייל:</span> your.email@example.com</p>
+                <p class="text-md mb-2"><span class="font-semibold">טלפון:</span> 052-1234567</p>
+                <p class="text-md"><span class="font-semibold">אינסטגרם:</span> <a href="https://www.instagram.com/your_instagram_handle" target="_blank" class="text-gold hover:underline">@your_instagram_handle</a></p>
+            </div>
+
+            <!-- הודעת הצלחה -->
+            <div id="successMessage" class="max-w-xl mx-auto p-8 rounded-xl shadow-lg mt-12 text-center hidden bg-white border border-[#64748B]">
+                <h3 class="text-2xl md:text-3xl font-bold text-[#475569] mb-4">ההזמנה התקבלה בהצלחה!</h3>
+                <p class="text-lg text-gray-700 mb-6">תודה רבה על ההזמנה! ניצור איתך קשר בהקדם כדי להשלים את התהליך.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- מסך 6: קריאה לפעולה (Footer) -->
+    <footer id="footer" class="bg-[#475569] text-white py-12 text-center rounded-t-3xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-gold animate-fade-in-up animate-delay-1">מוכנים ליצור זיכרון דיגיטלי לדורות?</h2>
+            <p class="text-md text-gray-300 mb-6 max-w-2xl mx-auto animate-fade-in-up animate-delay-2">בחרו את החבילה שמתאימה לכם, ותנו לנו להפוך את האירוע שלכם לשיחת היום.</p>
+            <a href="#packages" class="cta-button font-bold py-3 px-8 rounded-full shadow-lg animate-pulse-hover">בחרו את החבילה המושלמת עבורכם</a>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
+
+        // Firebase configuration - הפרטים שלך
+        const firebaseConfig = {
+            apiKey: "AIzaSyD75nnfkCAM0K8eqONFymIkVgHtKUK4q60",
+            authDomain: "myol-event.firebaseapp.com",
+            projectId: "myol-event",
+            storageBucket: "myol-event.firebasestorage.app",
+            messagingSenderId: "475374199517",
+            appId: "1:475374199517:web:e3da65cd31621fe994b134",
+            measurementId: "G-SCTBQDVVB6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        // Constants
+        const BASE_PRICE_BASIC = 499;
+        const BASE_PRICE_PREMIUM = 599;
+        const MAX_FACTS = 50;
+        const MIN_FACTS = 3;
+        let currentBasePrice = BASE_PRICE_BASIC;
+
+        // DOM Elements
+        const orderForm = document.getElementById('orderForm');
+        const successMessage = document.getElementById('successMessage');
+        const eventNameInput = document.getElementById('eventName');
+        const eventDateInput = document.getElementById('eventDate');
+        const eventTypeInput = document.getElementById('eventType');
+        const customerEmailInput = document.getElementById('customerEmail');
+        const customerPhoneInput = document.getElementById('customerPhone');
+        const videoFileInput = document.getElementById('videoFile');
+        const factsList = document.getElementById('factsList');
+        const addFactBtn = document.getElementById('addFactBtn');
+        const packageInputs = document.querySelectorAll('input[name="package"]');
+        const giftOptions = document.getElementById('giftOptions');
+        const giftQuantityInput = document.getElementById('giftQuantity');
+        const printTextInput = document.getElementById('printText');
+        const charCount = document.getElementById('charCount');
+        const charCountWarning = document.getElementById('charCountWarning');
+        const basePriceDisplay = document.getElementById('basePrice');
+        const extraCostDisplay = document.getElementById('extraCost');
+        const totalPriceDisplay = document.getElementById('totalPrice');
+
+        // Functions
+        function updatePrices() {
+            let giftQuantity = parseInt(giftQuantityInput.value) || 0;
+            let extraCost = 0;
+            let costPerUnit = 0;
+
+            if (document.getElementById('packagePremium').checked && document.getElementById('giftType').value !== 'none') {
+                if (giftQuantity >= 200) costPerUnit = 7;
+                else if (giftQuantity >= 100) costPerUnit = 5;
+                else if (giftQuantity >= 1) costPerUnit = 3;
+                extraCost = costPerUnit * giftQuantity;
+            }
+            
+            extraCostDisplay.textContent = `${extraCost}₪`;
+            totalPriceDisplay.textContent = `${currentBasePrice + extraCost}₪`;
+        }
+        
+        function initializeFacts() {
+            factsList.innerHTML = '';
+            for (let i = 0; i < MIN_FACTS; i++) addFactField();
+        }
+        
+        function addFactField() {
+            if (factsList.children.length >= MAX_FACTS) {
+                alert(`ניתן להוסיף עד ${MAX_FACTS} עובדות.`);
+                return;
+            }
+            const factDiv = document.createElement('div');
+            factDiv.className = 'flex items-center space-x-2 space-x-reverse';
+            factDiv.innerHTML = `
+                <input type="text" name="fact" maxlength="70" placeholder="הכנס עובדה/סיפור קצר" class="flex-1 p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#475569]">
+                <span class="char-counter text-sm text-gray-500">0/70</span>
+                <button type="button" class="remove-fact-btn text-red-500 font-bold text-xl leading-none">&times;</button>
+            `;
+            factsList.appendChild(factDiv);
+
+            const input = factDiv.querySelector('input');
+            const counter = factDiv.querySelector('.char-counter');
+            const removeBtn = factDiv.querySelector('.remove-fact-btn');
+
+            input.addEventListener('input', (e) => {
+                counter.textContent = `${e.target.value.length}/70`;
+            });
+            
+            removeBtn.addEventListener('click', () => {
+                if (factsList.children.length > MIN_FACTS) {
+                    factsList.removeChild(factDiv);
+                } else {
+                    alert(`חובה למלא מינימום ${MIN_FACTS} עובדות.`);
+                }
+            });
+        }
+
+        // Event Listeners
+        addFactBtn.addEventListener('click', addFactField);
+
+        packageInputs.forEach(input => {
+            input.addEventListener('change', (e) => {
+                document.querySelectorAll('.package-option').forEach(option => {
+                    option.classList.remove('border-gold');
+                });
+                e.target.closest('.package-option').classList.add('border-gold');
+                
+                if (e.target.value === 'premium') {
+                    giftOptions.classList.remove('hidden');
+                    currentBasePrice = BASE_PRICE_PREMIUM;
+                    basePriceDisplay.textContent = `החל מ-599₪`;
+                } else {
+                    giftOptions.classList.add('hidden');
+                    currentBasePrice = BASE_PRICE_BASIC;
+                    basePriceDisplay.textContent = `${BASE_PRICE_BASIC}₪`;
+                    giftQuantityInput.value = 1;
+                    printTextInput.value = '';
+                }
+                updatePrices();
+            });
+        });
+
+        giftQuantityInput.addEventListener('input', updatePrices);
+        document.getElementById('giftType').addEventListener('change', updatePrices);
+
+        printTextInput.addEventListener('input', (e) => {
+            const currentLength = e.target.value.length;
+            charCount.textContent = `${currentLength}/25`;
+            
+            if (currentLength >= 20) {
+                charCount.classList.add('text-red-500');
+                charCountWarning.textContent = 'מתקרבים לגבול התווים!';
+                charCountWarning.classList.remove('hidden');
+            } else {
+                charCount.classList.remove('text-red-500');
+                charCountWarning.classList.add('hidden');
+            }
+        });
+
+        // Form submission with Firebase
+        orderForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'שומר נתונים...';
+            submitBtn.disabled = true;
+
+            try {
+                // Validations
+                const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+                if (!dateRegex.test(eventDateInput.value)) {
+                    alert("יש למלא תאריך בפורמט dd/mm/yyyy");
+                    return;
+                }
+
+                const factInputs = factsList.querySelectorAll('input[name="fact"]');
+                const facts = Array.from(factInputs).map(input => input.value.trim()).filter(Boolean);
+
+                if (facts.length < MIN_FACTS) {
+                    alert(`יש למלא לפחות ${MIN_FACTS} עובדות.`);
+                    return;
+                }
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(customerEmailInput.value)) {
+                    alert("יש להזין כתובת מייל תקינה");
+                    return;
+                }
+
+                const phoneRegex = /^0[5-9][0-9]-?[0-9]{7}$|^0[2-4,8-9]-?[0-9]{7}$/;
+                if (!phoneRegex.test(customerPhoneInput.value.replace(/-/g, ''))) {
+                    alert("יש להזין מספר טלפון ישראלי תקין");
+                    return;
+                }
+
+                // Upload video if provided
+                let videoUrl = '';
+                if (videoFileInput.files.length > 0) {
+                    submitBtn.textContent = 'מעלה סרטון...';
+                    const file = videoFileInput.files[0];
+                    const fileName = `videos/${Date.now()}_${file.name}`;
+                    const videoRef = ref(storage, fileName);
+                    const snapshot = await uploadBytes(videoRef, file);
+                    videoUrl = await getDownloadURL(snapshot.ref);
+                }
+
+                // Prepare data for Firebase
+                submitBtn.textContent = 'יוצר חוויה...';
+                const eventData = {
+                    hostName: eventNameInput.value,
+                    eventType: eventTypeInput.value,
+                    eventDate: eventDateInput.value,
+                    customerEmail: customerEmailInput.value,
+                    customerPhone: customerPhoneInput.value,
+                    specialFacts: facts,
+                    thankYouVideo: videoUrl,
+                    package: document.querySelector('input[name="package"]:checked').value,
+                    giftType: document.getElementById('giftType').value,
+                    giftQuantity: parseInt(giftQuantityInput.value) || 0,
+                    printText: printTextInput.value,
+                    totalPrice: parseInt(totalPriceDisplay.textContent.replace('₪', '')),
+                    createdAt: new Date().toISOString(),
+                    status: 'active',
+                    theme: {
+                        primaryColor: "#192a56",
+                        secondaryColor: "#00a8cc", 
+                        backgroundColor: "#FDF6E3",
+                        goldColor: "#D4AF37",
+                        textColor: "#2c3e50"
+                    }
+                };
+
+                // Save to Firebase
+                const docRef = await addDoc(collection(db, 'events'), eventData);
+                const eventId = docRef.id;
+
+                // Create game URL
+                const gameUrl = `https://euphonious-alpaca-b96a08.netlify.app?eventId=${eventId}`;
+
+                // Update success message
+                successMessage.innerHTML = `
+                    <h3 class="text-2xl md:text-3xl font-bold text-[#475569] mb-4">ההזמנה התקבלה בהצלחה!</h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        תודה רבה ${eventData.hostName}! זהו הקישור לחוויה האינטראקטיבית שלכם:
+                    </p>
+                    <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                        <a href="${gameUrl}" target="_blank" class="text-blue-600 underline break-all">${gameUrl}</a>
+                        <br><br>
+                        <button onclick="navigator.clipboard.writeText('${gameUrl}')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                            העתק קישור
+                        </button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg text-right space-y-2">
+                        <p class="text-sm"><strong>מזהה חוויה:</strong> ${eventId}</p>
+                        <p class="text-sm"><strong>תאריך אירוע:</strong> ${eventData.eventDate}</p>
+                        <p class="text-sm"><strong>מספר עובדות:</strong> ${facts.length}</p>
+                        <p class="text-sm"><strong>חבילה:</strong> ${eventData.package === 'premium' ? 'פרימיום' : 'בסיסית'}</p>
+                        ${videoUrl ? '<p class="text-sm"><strong>סרטון:</strong> הועלה בהצלחה ✓</p>' : '<p class="text-sm"><strong>סרטון:</strong> לא הועלה</p>'}
+                    </div>
+                `;
+
+                document.getElementById('contact-form').classList.add('hidden');
+                successMessage.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Error saving to Firebase:', error);
+                alert('אירעה שגיאה בשמירת הנתונים. אנא נסו שוב.');
+                
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeFacts();
+            updatePrices();
+            document.getElementById('packageBasic').checked = true;
+            document.querySelector('input[value="basic"]').closest('.package-option').classList.add('border-gold');
+        });
+    </script>
+
+</body>
+</html>
